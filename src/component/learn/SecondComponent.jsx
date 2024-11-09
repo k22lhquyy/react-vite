@@ -7,9 +7,10 @@ const SecondComponent = () => {
 }
 
 const ThirdComponent = () => {
+    const ints = [1, 2, 3]
     return (
         <div>
-            ThirdComponent
+            {JSON.stringify(ints)}
         </div>
     )
 }
