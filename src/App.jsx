@@ -4,6 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+
+  const myFunction = () => {
+    console.log("toi la quy le")
+  }
+
+  myFunction()
+
   const [count, setCount] = useState(0)
 
   return (
