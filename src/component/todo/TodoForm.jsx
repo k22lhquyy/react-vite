@@ -1,7 +1,12 @@
+import { useState } from "react"
+
 const TodoForm = (props) => {
+
+    const [myValue, setMyValue] = useState("");
 
     const handleChange = (name) => {
         console.log(name)
+        setMyValue(name)
     }
 
     const handleClick = () => {
@@ -9,14 +14,20 @@ const TodoForm = (props) => {
     }
 
     return (
-        <div>
+        <div className="todoform">
             <input type="text" 
-                onChange={(event) => handleChange(event.target.value)}
+                onChange={(event) => {
+                    handleChange(event.target.value);
+                }}
+
             />
             <button
                 style={{cursor: "pointer"}}
                 onClick={handleClick} 
             >Add</button>
+            <div>
+                đây là text của tôi = {`${myValue}`}
+            </div>
         </div>
     );
 }
