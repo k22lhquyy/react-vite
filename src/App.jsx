@@ -1,13 +1,33 @@
 import './component/todo/todo.css'
 import TodoData from './component/todo/TodoData';
 import TodoForm from './component/todo/TodoForm';
+import TodoLogo from './assets/react.svg'
 
 const App = () => {
+
+  const name = "quyle"
+  const age = "25"
+  const data = {
+    address: "Quang Nam",
+    country: "Viet Nam"
+  }
+
+  // const hander = () => {
+  //   alert("Click me");
+  // }
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
       <TodoForm/>
-      <TodoData/>
+      <TodoData
+        name={name}
+        age={age}
+        data={data}
+      />
+      <div>
+        <img src={TodoLogo} alt="" />
+      </div>
     </div>
   );
 }
