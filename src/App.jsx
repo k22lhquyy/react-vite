@@ -11,12 +11,6 @@ const App = () => {
     { id: 2, name: "Learning React" }
   ]);
 
-  const name = "quyle"
-  const age = "25"
-  const data = {
-    address: "Quang Nam",
-    country: "Viet Nam"
-  }
 
   const callMe = (name) => {
     const newTodo = {
@@ -34,9 +28,6 @@ const App = () => {
         callMe={callMe}
       />
       <TodoData
-        name={name}
-        age={age}
-        data={data}
         todoList={todoList}
       />
       <div>

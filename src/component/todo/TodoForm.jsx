@@ -13,6 +13,7 @@ const TodoForm = (props) => {
 
     const handleClick = () => {
         callMe(myValue);
+        setMyValue("")
     }
 
     return (
@@ -21,11 +22,11 @@ const TodoForm = (props) => {
                 onChange={(event) => {
                     handleChange(event.target.value);
                 }}
-
+                value={myValue}
             />
             <button
                 style={{cursor: "pointer"}}
-                onClick={handleClick} 
+                onClick={handleClick}
             >Add</button>
             <div>
                 đây là text của tôi = {`${myValue}`}

@@ -7,3 +7,9 @@
     display: flex;
     gap: 20px;
 }
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
