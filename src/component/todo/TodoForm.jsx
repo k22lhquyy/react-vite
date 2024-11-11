@@ -4,13 +4,15 @@ const TodoForm = (props) => {
 
     const [myValue, setMyValue] = useState("");
 
+    const {callMe} = props;
+
     const handleChange = (name) => {
         console.log(name)
         setMyValue(name)
     }
 
     const handleClick = () => {
-        alert("tôi đã click");
+        callMe(myValue);
     }
 
     return (

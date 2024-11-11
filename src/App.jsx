@@ -18,14 +18,21 @@ const App = () => {
     country: "Viet Nam"
   }
 
-  // const hander = () => {
-  //   alert("Click me");
-  // }
+  const callMe = (name) => {
+    const newTodo = {
+      id : 3,
+      name : name
+    }
+    setTodoList([...todoList, newTodo]);
+    // alert(`call me ${name}`);
+  }
 
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoForm />
+      <TodoForm 
+        callMe={callMe}
+      />
       <TodoData
         name={name}
         age={age}
